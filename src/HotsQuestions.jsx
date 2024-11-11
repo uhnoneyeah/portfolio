@@ -89,6 +89,7 @@ const Modal = styled(motion.div)`
   height: 80vh;
   overflow-y: auto;
   z-index: 1000;
+  padding-top: 4rem;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -115,14 +116,16 @@ const Overlay = styled(motion.div)`
 `
 
 const CloseButton = styled(motion.button)`
-  position: absolute;
+  position: sticky;
   top: 1rem;
   right: 1rem;
+  float: right;
   background: transparent;
   border: none;
   color: #00ff00;
   cursor: pointer;
   font-size: 1.5rem;
+  z-index: 1001;
   
   &:hover {
     color: #ff5f56;
@@ -268,7 +271,15 @@ function HotsQuestions() {
                   <Image src="/hack-3.png" alt="Hackerrank Solution 3" />
                 </ImageGrid>
               ) : (
-                <Image src="/hots.png" alt="HOTS Questions" />
+                <ImageGrid>
+                  <Image src="/hots.png" alt="HOTS Questions" />
+                  <Image src="/hots-2.jpeg" alt="HOTS Questions 2" />
+                  <Image src="/hots-3.jpeg" alt="HOTS Questions 3" />
+                  <Image src="/hots-4.jpeg" alt="HOTS Questions 4" />
+                  <Image src="/hots-5.jpeg" alt="HOTS Questions 5" />
+                  <Image src="/hots-6.jpeg" alt="HOTS Questions 6" />
+                  <Image src="/hots-7.jpeg" alt="HOTS Questions 7" />
+                </ImageGrid>
               )}
             </Modal>
           </>
